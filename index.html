@@ -541,7 +541,7 @@
                 </a>
             </div>
             
-            <a href="#" class="download-btn">
+            <a href="#" class="download-btn" id="resume-download">
                 <i class="fas fa-download"></i>
                 Download Resume
             </a>
@@ -618,7 +618,7 @@
                         <li>Implemented service-specific data storage across 20 separate DynamoDB tables, achieving 5ms average read/write latency and ensuring high availability and scalability of the entire system.</li>
                         <li>Reduced manual audit time by 80% and increased data accuracy by 95% through automated resource tracking and management, eliminating manual data retrieval tasks.</li>
                     </ul>
-                    <a href="#" class="code-link" target="https://github.com/tempest-29/AWS-Inventory-System">
+                    <a href="https://github.com/tempest-29/AWS-Inventory-System" class="code-link" target="_blank">
                         <i class="fab fa-github"></i>
                         View Code
                     </a>
@@ -639,7 +639,7 @@
                         <li>Developed machine learning pipeline using scikit-learn RandomForestClassifier and TF-IDF vectorization to automatically classify job experience levels and extract technical skills from job descriptions with 1000+ feature extraction.</li>
                         <li>Implemented scalable job scraping and analysis system with modular architecture including ML-enhanced NLP processing, database storage layer, and RESTful API endpoints for real-time job data updates.</li>
                     </ul>
-                    <a href="#" class="code-link" target="https://github.com/tempest-29/Placed">
+                    <a href="https://github.com/tempest-29/Placed" class="code-link" target="_blank">
                         <i class="fab fa-github"></i>
                         View Code
                     </a>
@@ -660,7 +660,7 @@
                         <li>Preprocessed input data with OpenCV, augmented training data, and used a custom CNN achieving high accuracy in keypoint localization.</li>
                         <li>Evaluated model performance using Euclidean distance between predicted and ground truth landmarks and visualized results using Matplotlib.</li>
                     </ul>
-                    <a href="#" class="code-link" target="https://github.com/tempest-29/Landmark-Detection">
+                    <a href="https://github.com/tempest-29/Landmark-Detection" class="code-link" target="_blank">
                         <i class="fab fa-github"></i>
                         View Code
                     </a>
@@ -774,19 +774,16 @@
         document.addEventListener('DOMContentLoaded', fetchGitHubProfilePicture);
 
         // Resume download functionality
-        document.querySelector('.download-btn').addEventListener('click', function(e) {
+        document.getElementById('resume-download').addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Create a temporary link to simulate download
+            // Create a temporary link to trigger download
             const link = document.createElement('a');
-            link.href = '#';
-            link.download = 'https://github.com/tempest-29/tempest-29.github.io/blob/main/ArmanResume__D_.pdf';
+            link.href = 'https://github.com/tempest-29/tempest-29.github.io/raw/main/ArmanResume__D_.pdf';
+            link.download = 'Arman_Bishnoi_Resume.pdf';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-            
-            // Show a message
-            alert('Your resume download will start shortly. In a real implementation, this would download the PDF file.');
         });
     </script>
 </body>
